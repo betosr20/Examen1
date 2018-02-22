@@ -88,4 +88,16 @@ public class PruebasProcesadorRomano {
 		}
 		assertTrue(excepcion);
 	}
+
+	@Test
+	public void test5() throws Exception {
+		ProcesadorRomano procesador5 = new ProcesadorRomano();
+		assertEquals(60, procesador5.Convierte("LX"));
+		assertEquals(16, procesador5.Convierte("XVI"));
+		assertEquals(8, procesador5.Convierte("VIII"));
+		assertEquals(21, procesador5.Convierte("XXI"));
+		assertEquals(101, procesador5.Convierte("CI"));
+		assertEquals(161, procesador5.Convierte("CLXI"));
+	
+	}
 }
