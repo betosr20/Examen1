@@ -3,8 +3,10 @@ package PruebasProcesador;
 public class ProcesadorRomano {
 
 	public int Convierte(String pnumRomano) {
-		
-		return 0;
+		if (!pnumRomano.isEmpty()){
+			return 0;
+		}
+		return 1;
 	}
 
 }
