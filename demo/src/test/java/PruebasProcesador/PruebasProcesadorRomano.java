@@ -9,7 +9,7 @@ public class PruebasProcesadorRomano {
 	@Test
 	public void test1() {
 		ProcesadorRomano procesador = new ProcesadorRomano();
-		assertEquals(procesadorRomano.Convierte(""), 0);
+		assertEquals(procesador.Convierte(" "), 0);
 		
 	}
 
