@@ -7,13 +7,13 @@ import org.junit.Test;
 public class PruebasProcesadorRomano {
 
 	@Test
-	public void test1() {
+	public void test1() throws Exception {
 		ProcesadorRomano procesador = new ProcesadorRomano();
 		assertEquals(0, procesador.Convierte(""));
 		
 	}
 	@Test
-	public void test2() {
+	public void test2() throws Exception {
 		ProcesadorRomano procesador2 = new ProcesadorRomano();
 		assertEquals(1, procesador2.Convierte("I"));
 		assertEquals(2, procesador2.Convierte("II"));
@@ -23,6 +23,9 @@ public class PruebasProcesadorRomano {
 		assertEquals(50, procesador2.Convierte("L"));
 		assertEquals(100, procesador2.Convierte("C"));
 		assertEquals(500, procesador2.Convierte("D"));
-		assertEquals(1000, procesador2.Convierte("M"));		
+		try {
+		assertEquals(1000, procesador2.Convierte("IIII"));
+		}catch (Exception e){
+		}
 	}
 }

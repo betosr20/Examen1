@@ -2,7 +2,7 @@ package PruebasProcesador;
 
 public class ProcesadorRomano {
 
-	public int Convierte(String pnumRomano) {
+	public int Convierte(String pnumRomano)throws Exception {
 		int numero;
 		if (pnumRomano == ""){
 			return 0;
@@ -17,10 +17,7 @@ public class ProcesadorRomano {
 				case "III": numero=3;
 				break;
 				
-				case "IIII": numero=1;
-				break;
-				
-				case "V": numero=5;
+			case "V": numero=5;
 				break;
 				
 				case "X": numero=10;
@@ -38,6 +35,7 @@ public class ProcesadorRomano {
 				case "M": numero=1000;
 				break;
 				
+				case "IIII": throw new Exception("Error, no se permiten 4 Is");
 				default :numero =0;
 			}	
 			
