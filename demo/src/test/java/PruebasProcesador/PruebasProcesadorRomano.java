@@ -24,6 +24,7 @@ public class PruebasProcesadorRomano {
 		assertEquals(50, procesador2.Convierte("L"));
 		assertEquals(100, procesador2.Convierte("C"));
 		assertEquals(500, procesador2.Convierte("D"));
+		assertEquals(1000, procesador2.Convierte("M"));
 		try {
 		assertEquals(1000, procesador2.Convierte("IIII"));
 		}catch (Exception e){
