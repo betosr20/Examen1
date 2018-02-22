@@ -12,7 +12,8 @@ public class ProcesadorRomano {
 			int contC =0;
 			int contD =0;
 			int contM =0;
-			char anterior = ' ';
+			int valorAnterior =0;
+			int valorActual =0;
 			char letra;
 			numero =0;
 			
@@ -22,47 +23,54 @@ public class ProcesadorRomano {
 				switch (letra) {
 					case 'I': 
 						numero++;
-						contI++;	
+						contI++;
+						valorActual = 1;
 					break;
 					
 				case 'V': 
 					numero= numero + 5;
 					contV++;
+					valorActual = 5;
 					break;
 					
 					case 'X': 
 						numero= numero +10;
 						contX++;
+						valorActual = 10;
 					break;
 					
 					case 'L': 
 						numero= numero + 50;
 						contL++;
+						valorActual = 50;
 					break;
 					
 					case 'C': 
 						numero=  numero +100;
 						contC++;
+						valorActual = 100;
 					break;
 					
 					case 'D': 
 						numero= numero +500;
 						contD++;
+						valorActual = 500;
 					break;
 					
 					case 'M': 
 						numero= numero +1000;
 						contM++;
+						valorActual = 1000;
 					break;
 					default: numero =0;
 				}
-				if (i == 0) {
-					anterior = letra;
+				if(i==0) {
+					valorAnterior = valorActual;
 				}
-				if (anterior > letra){
+				if (valorAnterior < valorActual){
 					throw new Exception("Solo se permiten numeros en orden descendente");
 				}
-				anterior = letra;
+				valorAnterior = valorActual;
 			}
 			
 			if(contI > 3) {
