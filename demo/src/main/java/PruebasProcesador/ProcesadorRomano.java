@@ -18,9 +18,6 @@ public class ProcesadorRomano {
 			
 			for(int i=0; i< pnumRomano.length(); i++) {
 				letra = pnumRomano.charAt(i);				
-				if (i == 0) {
-					anterior = letra;
-				}
 				
 				switch (letra) {
 					case 'I': 
@@ -58,6 +55,9 @@ public class ProcesadorRomano {
 						contM++;
 					break;
 					default: numero =0;
+				}
+				if (i == 0) {
+					anterior = letra;
 				}
 				if (anterior > letra){
 					throw new Exception("Solo se permiten numeros en orden descendente");
