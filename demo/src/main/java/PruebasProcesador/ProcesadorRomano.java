@@ -3,11 +3,10 @@ package PruebasProcesador;
 public class ProcesadorRomano {
 
 	public int Convierte(String pnumRomano) {
-		int numero =0;
+		int numero;
 		if (pnumRomano == ""){
 			return 0;
 		}else {
-			numero=5;
 			switch (pnumRomano) {
 				case "I": numero=1;
 				break;
@@ -38,7 +37,10 @@ public class ProcesadorRomano {
 				
 				case "M": numero=1000;
 				break;
+				
+				default :numero =0;
 			}	
+			
 			return numero;
 		}
 	}
