@@ -9,20 +9,20 @@ public class PruebasProcesadorRomano {
 	@Test
 	public void test1() {
 		ProcesadorRomano procesador = new ProcesadorRomano();
-		assertEquals(procesador.Convierte(" "), 0);
+		assertEquals(0, procesador.Convierte(""));
 		
 	}
 	@Test
 	public void test2() {
 		ProcesadorRomano procesador2 = new ProcesadorRomano();
-		assertEquals(procesador2.Convierte("I"), 1);
-		assertEquals(procesador2.Convierte("II"), 2);
-		assertEquals(procesador2.Convierte("III"), 3);
-		assertEquals(procesador2.Convierte("V"), 5);
-		assertEquals(procesador2.Convierte("X"), 10);
-		assertEquals(procesador2.Convierte("L"), 50);
-		assertEquals(procesador2.Convierte("C"), 100);
-		assertEquals(procesador2.Convierte("D"), 500);
-		assertEquals(procesador2.Convierte("M"), 1000);
+		assertEquals(1, procesador2.Convierte("I"));
+		assertEquals(2, procesador2.Convierte("II"));
+		assertEquals(3, procesador2.Convierte("III"));
+		assertEquals(5, procesador2.Convierte("V"));
+		assertEquals(10, procesador2.Convierte("X"));
+		assertEquals(50, procesador2.Convierte("L"));
+		assertEquals(100, procesador2.Convierte("C"));
+		assertEquals(500, procesador2.Convierte("D"));
+		assertEquals(1000, procesador2.Convierte("M"));		
 	}
 }
