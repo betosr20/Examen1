@@ -76,5 +76,16 @@ public class PruebasProcesadorRomano {
 		assertTrue(excepcionX);
 		assertTrue(excepcionC);
 	}
-
+	
+	@Test
+	public void test4() throws Exception {
+		boolean excepcion=false;
+		ProcesadorRomano procesador4 = new ProcesadorRomano();
+		try {
+		assertEquals(1000, procesador4.Convierte("XXL"));
+		}catch (Exception e){
+			excepcion = true;
+		}
+		assertTrue(excepcion);
+	}
 }
