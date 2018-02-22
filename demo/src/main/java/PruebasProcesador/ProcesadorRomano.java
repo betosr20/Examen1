@@ -17,6 +17,8 @@ public class ProcesadorRomano {
 				case "III": numero=3;
 				break;
 				
+				case "IIII": throw new Exception("Error, no se permiten 4 Is");
+				
 			case "V": numero=5;
 				break;
 				
@@ -35,7 +37,6 @@ public class ProcesadorRomano {
 				case "M": numero=1000;
 				break;
 				
-				case "IIII": throw new Exception("Error, no se permiten 4 Is");
 				default :numero =0;
 			}	
 			
